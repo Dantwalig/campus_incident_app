@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../../core/cloudinary_url.dart';
 import '../../core/formatters.dart';
 import '../../core/theme.dart';
 import '../../core/ui_extensions.dart';
@@ -145,7 +146,7 @@ class IncidentDetailsScreen extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.circular(16),
                 child: Image.network(
-                  incident.photoUrl!,
+                  cloudinaryTransform(incident.photoUrl!, CloudinaryTransforms.detail),
                   height: 220,
                   width: double.infinity,
                   fit: BoxFit.cover,

@@ -5,7 +5,11 @@ class AppConstants {
   static const cloudinaryUploadPreset = 'YOUR_UNSIGNED_PRESET';
 
   /// Only these email domains can register and use the app.
-  static const allowedEmailDomains = ['alustudent.com', 'alueducation.com'];
+  static const allowedEmailDomains = [
+    'alustudent.com',
+    'alueducation.com',
+    'si.alueducation.com',
+  ];
 
   static const campusLocations = [
     'Student Residence',

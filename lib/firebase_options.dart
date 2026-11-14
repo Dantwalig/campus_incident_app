@@ -1,4 +1,3 @@
-// PLACEHOLDER FILE.
 // Run `flutterfire configure` in the project root. It will overwrite this file
 // with the real configuration for your own Firebase project.
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;

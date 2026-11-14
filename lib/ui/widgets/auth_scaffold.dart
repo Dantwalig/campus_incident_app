@@ -28,19 +28,14 @@ class AuthScaffold extends StatelessWidget {
                 children: [
                   Align(
                     alignment: Alignment.centerLeft,
-                    child: Container(
-                      height: 60,
-                      width: 60,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(18),
-                        gradient: const LinearGradient(
-                          colors: [Color(0xFF8B5CF6), AppColors.primary],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(18),
+                      child: Image.asset(
+                        'assets/icon/app_icon.png',
+                        height: 64,
+                        width: 64,
+                        fit: BoxFit.cover,
                       ),
-                      child: const Icon(Icons.campaign_rounded,
-                          color: Colors.white, size: 30),
                     ),
                   ),
                   const SizedBox(height: 20),

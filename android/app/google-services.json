@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1098853569366",
+    "project_id": "campus-incident-app-8c019",
+    "storage_bucket": "campus-incident-app-8c019.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1098853569366:android:c32fd0f68da592eae0bcf7",
+        "android_client_info": {
+          "package_name": "com.danielntwali.campus_incident_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1098853569366-f7r9g07bbffv2av6qbjgrp3ret3sne6h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7-syxJTZo3Gvu7OZt4WjzwPtUntK4kG0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1098853569366-f7r9g07bbffv2av6qbjgrp3ret3sne6h.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1098853569366-3f709datd9abda8alrgn5vj9v2tllnis.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.danielntwali.campusIncidentApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

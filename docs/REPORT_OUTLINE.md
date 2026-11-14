@@ -20,7 +20,9 @@ Name the final file: YourName_Assignment2.pdf
 ## 3. Firebase data structure
 * Collections: users, incidents (fields table from README)
 * Photos are stored on Cloudinary (unsigned upload preset), the URL is saved in photoUrl
-* Explain why Cloudinary was used instead of Firebase Storage (approved by the facilitator)
+* Explain why Cloudinary was used instead of Firebase Storage: Blaze billing needs a card that is not available, and the facilitator approved an alternative
+* Include a screenshot of the facilitator's approval message as evidence
+* Mention server side image transformations (thumbnail and detail sizes)
 * Insert a data model diagram and Firebase Console and Cloudinary screenshots
 
 ## 4. State management

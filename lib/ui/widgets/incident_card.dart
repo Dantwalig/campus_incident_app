@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../core/cloudinary_url.dart';
 import '../../core/formatters.dart';
 import '../../core/theme.dart';
 import '../../core/ui_extensions.dart';
@@ -94,7 +95,7 @@ class _Thumb extends StatelessWidget {
       child: incident.photoUrl == null
           ? fallback
           : Image.network(
-              incident.photoUrl!,
+              cloudinaryTransform(incident.photoUrl!, CloudinaryTransforms.thumbnail),
               height: 56,
               width: 56,
               fit: BoxFit.cover,

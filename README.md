@@ -7,7 +7,8 @@ their status. Built for ALU Individual Assignment 2.
 ## Features
 
 * Registration, login, logout, password reset
-* Email verification and ALU only access (alustudent.com and alueducation.com)
+* Email verification and ALU only access: students use alustudent.com, staff use
+  alueducation.com or si.alueducation.com
 * Roles: student and staff, enforced in the UI and in Firebase security rules
 * Submit reports with category, title, description, location and optional photo
 * Anonymous reporting and a duplicate report warning
@@ -23,6 +24,17 @@ their status. Built for ALU Individual Assignment 2.
 * State management: Provider (ChangeNotifier)
 * Firebase Authentication and Cloud Firestore
 * Cloudinary (free plan) for incident photos
+
+## Photo storage decision
+
+The assignment brief names Firebase Storage for photos. Firebase now requires a
+paid billing plan (Blaze) to enable Storage, and prepaid cards are not accepted.
+The course facilitator approved using another free storage service, so photos are
+uploaded to Cloudinary (free tier, no card needed). Firebase Authentication and
+Cloud Firestore are used as required. Only the image URL is stored in Firestore.
+
+Cloudinary also resizes and compresses images on delivery (small thumbnails in
+lists, larger images on the details screen), which keeps the app fast on mobile data.
 
 ## Architecture
 
@@ -113,6 +125,13 @@ a limitation in the report.
 
 Self registration can only ever create students, because the security rules
 reject a users document with any other role.
+
+## Pushing to GitHub
+
+Commit `lib/firebase_options.dart`, `android/app/google-services.json` and
+`pubspec.lock`. They contain client configuration, not secrets, and graders need
+them to build the app. Data is protected by the Firestore rules, not by hiding
+these files. The Cloudinary cloud name and the unsigned preset are public by design.
 
 ## Tests
 

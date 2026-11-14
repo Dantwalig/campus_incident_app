@@ -118,6 +118,9 @@ class IncidentProvider extends ChangeNotifier {
         ),
       );
       return true;
+    } on PhotoUploadException catch (e) {
+      _error = e.message;
+      return false;
     } catch (_) {
       _error = 'Could not submit the report. Please try again.';
       return false;

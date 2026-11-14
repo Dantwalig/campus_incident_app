@@ -6,6 +6,7 @@ void main() {
     test('accepts ALU student and staff emails', () {
       expect(Validators.aluEmail('jane@alustudent.com'), isNull);
       expect(Validators.aluEmail('prof@alueducation.com'), isNull);
+      expect(Validators.aluEmail('staff@si.alueducation.com'), isNull);
     });
 
     test('rejects other domains and bad formats', () {
