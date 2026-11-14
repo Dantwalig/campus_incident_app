@@ -17,6 +17,7 @@ class PhotoUploadException implements Exception {
 }
 
 /// Uploads incident photos to Cloudinary using an unsigned upload preset.
+/// The destination folder is set on the preset itself (Asset folder).
 /// The returned secure URL is saved in the incident document (photoUrl).
 class PhotoService {
   PhotoService({http.Client? client}) : _client = client ?? http.Client();
@@ -27,7 +28,7 @@ class PhotoService {
       !AppConstants.cloudinaryCloudName.startsWith('YOUR_') &&
       !AppConstants.cloudinaryUploadPreset.startsWith('YOUR_');
 
-  Future<String> uploadIncidentPhoto(File file, String uid) async {
+  Future<String> uploadIncidentPhoto(File file) async {
     if (!isConfigured) {
       throw const PhotoUploadException(
         'Photo upload is not set up yet. Add your Cloudinary details in '
@@ -42,7 +43,6 @@ class PhotoService {
     try {
       final request = http.MultipartRequest('POST', uri)
         ..fields['upload_preset'] = AppConstants.cloudinaryUploadPreset
-        ..fields['folder'] = 'campus_incidents/$uid'
         ..files.add(await http.MultipartFile.fromPath('file', file.path));
 
       final streamed =

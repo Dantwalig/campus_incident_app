@@ -90,7 +90,7 @@ class IncidentProvider extends ChangeNotifier {
     String? photoUrl;
     try {
       if (photo != null) {
-        photoUrl = await _photos.uploadIncidentPhoto(photo, user.uid);
+        photoUrl = await _photos.uploadIncidentPhoto(photo);
       }
       final now = DateTime.now();
       final displayName = anonymous ? 'Anonymous' : user.name;

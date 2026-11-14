@@ -20,7 +20,6 @@ class IncidentService {
         .map((snap) => snap.docs.map(Incident.fromDoc).toList());
   }
 
-  // CREATE
   Future<String> create(Incident incident) async {
     final ref = _col.doc();
     await ref.set(incident.toMap());
@@ -62,7 +61,6 @@ class IncidentService {
     });
   }
 
-  // DELETE
   Future<void> delete(String id) => _col.doc(id).delete();
 
   /// Open reports in the same category and location, used for the
