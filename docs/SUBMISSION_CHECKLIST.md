@@ -22,7 +22,7 @@
 | Product thinking (5) | Anonymous mode, duplicate warning, role rules | Explain privacy, misuse prevention and why students can delete only Submitted reports |
 
 ## Before recording
-* [ ] Cloudinary cloud name and unsigned preset set in lib/core/constants.dart
+* [ ] Cloudinary cloud name and unsigned preset are set in lib/core/constants.dart
 * [ ] Firestore rules published
 * [ ] One student account and one staff account verified and ready
 * [ ] A few sample reports with different categories and statuses
