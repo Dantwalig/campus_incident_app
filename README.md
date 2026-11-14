@@ -105,7 +105,7 @@ If a package version fails to resolve, run `flutter pub upgrade --major-versions
 1. Create a free account at cloudinary.com and copy your Cloud name from the dashboard.
 2. Go to Settings, Upload, Upload presets, and click Add upload preset.
 3. Set Signing mode to Unsigned, set a name, and save.
-4. Open `lib/core/constants.dart` and replace `YOUR_CLOUD_NAME` and
+4. Open `lib/core/constants.dart` and replace `n4xbtdw9` and
    `YOUR_UNSIGNED_PRESET` with your values.
 5. Android release builds need `<uses-permission android:name="android.permission.INTERNET"/>`
    in `android/app/src/main/AndroidManifest.xml` (debug builds already have it).
