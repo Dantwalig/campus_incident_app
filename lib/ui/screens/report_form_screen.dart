@@ -6,7 +6,6 @@ import 'package:provider/provider.dart';
 
 import '../../core/constants.dart';
 import '../../core/theme.dart';
-import '../../core/ui_extensions.dart';
 import '../../core/ui_helpers.dart';
 import '../../core/validators.dart';
 import '../../data/models/incident.dart';
@@ -207,7 +206,7 @@ class _ReportFormScreenState extends State<ReportFormScreen> {
               ),
               _label('Location'),
               DropdownButtonFormField<String>(
-                value: _place,
+                initialValue: _place,
                 items: [
                   for (final p in AppConstants.campusLocations)
                     DropdownMenuItem(value: p, child: Text(p)),

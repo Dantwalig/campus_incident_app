@@ -99,8 +99,6 @@ Photos are uploaded to Cloudinary (folder campus_incidents/{uid}). Only the imag
 8. Run `flutter pub get`, then `flutter run`.
 
 If a package version fails to resolve, run `flutter pub upgrade --major-versions`.
-If the analyzer reports that `value` on DropdownButtonFormField is deprecated,
-rename it to `initialValue`.
 
 ## Cloudinary setup (photo uploads)
 

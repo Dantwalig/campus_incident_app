@@ -307,7 +307,7 @@ class _StaffPanelState extends State<_StaffPanel> {
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700)),
           const SizedBox(height: 12),
           DropdownButtonFormField<IncidentStatus>(
-            value: _status,
+            initialValue: _status,
             items: [
               for (final s in IncidentStatus.values)
                 DropdownMenuItem(value: s, child: Text(s.label)),
